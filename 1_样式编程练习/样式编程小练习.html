@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>样式编程练习</title>
+		<style>
+		    body{
+		    	background-color: #CCCCCC;
+		    }
+			div{
+				margin: 0 auto;
+				text-align: center;
+			}
+			#content div{
+				width: 150px;
+				height: 150px;
+				margin-bottom: 20px;
+				font-weight: bold;
+				font-size: 30px;
+				line-height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div>div1</div>
+			<div>div2</div>
+			<div>div3</div>
+		</div>
+		<script>
+		    var colors=['red','yellow','blue'];
+		    var zindexs=[100,300,200];
+			var oDivs=document.querySelectorAll("#content div");
+			var oContent=document.getElementById("content");
+			oContent.style.position="relative";
+			var x=10;
+			for(var i=0;i<oDivs.length;i++){
+				oDivs[i].style.position="absolute";
+				oDivs[i].style.backgroundColor=colors[i];
+				oDivs[i].style.zIndex=zindexs[i];
+				oDivs[i].style.left=x+"px";
+				oDivs[i].style.top=x+"px";
+				x+=20;
+			}
+		</script>
+	</body>
+</html>

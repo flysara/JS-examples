@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>DOM编程练习</title>
+		<style>
+		    body{
+		    	background-color: #ccc;
+	
+		    }
+	
+		</style>
+	</head>
+	<body>
+		<ul id="dataList">
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+		</ul>
+		<input type="button" value="上拉刷新" id="btnPullUp"/>
+		<input type="button" value="下拉加载" id="btnPullDown"/>
+		<script>
+		  var btnUp=document.getElementById("btnPullUp");
+		  var btnDown=document.getElementById("btnPullDown");
+		  var list=document.getElementById("dataList");
+		  var listlen=document.getElementsByTagName("li").length;
+		  
+		  //上拉刷新
+		  btnUp.addEventListener("click",function(){
+			 var fragment=document.createDocumentFragment();
+			  for(var i=0;i<3;i++)
+			  {
+				  var oli=document.createElement("li");
+				  oli.innerText="item"+(++listlen);
+				  fragment.appendChild(oli);
+			  }
+			  list.appendChild(fragment);
+		  },false);
+		 
+		 //下拉加载
+		  btnDown.addEventListener("click",function(){
+		 			 var fragment=document.createDocumentFragment();
+					 listlen+=3;
+		 			  for(var i=listlen;i>listlen-3;i--)//下拉数字大小是从下到上依次增大,所以采用递减方法
+		 			  {
+		 				  var oli=document.createElement("li");
+		 				  oli.innerText="item"+i;
+		 				  fragment.appendChild(oli);
+		 			  }
+		 			  list.insertBefore(fragment,list.firstChild);//在第一个子节点前面添加
+		 },false);
+		</script>
+	</body>
+</html>
