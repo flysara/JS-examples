@@ -1,0 +1,59 @@
+body{
+	width:100%;
+	margin:10px;
+	padding:10px;
+}
+h2{
+	font:impact;
+	text-align:center;
+	text-shadow:1px 1px dimgray;
+	margin:10px;
+	margin:30px;
+}
+hr{
+	margin-bottom: 50px;
+}
+
+/*电子时钟的总体样式设置*/
+#clock{
+	width:1000px;
+	height:250px;
+	margin:0 auto;
+	padding:35px;
+	font-size:80px;
+	font-weight:bold;
+	border-radius:20px;
+	text-align:center;
+	border:black 1px inset;
+	background-color:rgba(38,31,31,1);
+}
+
+/*时分秒数字区域的样式设置*/
+.box1{
+	background-color: white;
+	margin:20px;
+	margin-left:55px;
+	width:200px;
+	height:200px;
+	line-height:200px;
+	float:left;
+	border:black 1px inset;
+	border-radius:8px;
+	box-shadow:8px 8px 8px rgba(68,70,64,1.00);
+	font:impact;
+	font-size:80px;
+	font-color:black;
+	text-shadow:2px 2px rgba(68,70,64,1.00);
+}
+
+/*冒号*/
+.box2{
+	width:50px;
+	height:200px;
+	line-height:200px;/*垂直居中*/
+	text-align:center;/*水平居中*/
+	font-size:90px;
+	color:white;
+	float:left;
+	margin-left:10px;
+}
