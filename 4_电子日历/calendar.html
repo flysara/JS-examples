@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>电子日历的创建</title>
+		<link rel="stylesheet" href="calendar.css" />
+	</head>
+	<body onload="showDate()">
+		<h2>简单电子日历的设计</h2>
+		<hr />
+		<!--电子日历分为三个板块，①状态栏，左右两边显示“上个月”和“下个月”按钮以及中间是当前的年份和月份显示
+		②日历最上面宜兰市显示星期名称，从周日到周一；③用于显示当前月份的所有日期的区域-->
+	    
+		<div id="calendar">
+			<!--状态栏-->
+			<div>
+				<button onclick="lastMonth()">上个月</button>
+				<div id="month"></div>
+				<button onclick="nextMonth()">下个月</button>
+			</div>
+			
+			<!--显示星期几-->
+			<div>
+				<div class="day">日</div>
+				<div class="day">一</div>
+				<div class="day">二</div>
+				<div class="day">三</div>
+				<div class="day">四</div>
+				<div class="day">五</div>
+				<div class="day">六</div>
+			</div>
+			
+			<!--显示当前月份每天的日期-->
+			<div id="days"></div>
+		</div>	
+		<script src="calendar.js"></script>
+	</body>
+</html>

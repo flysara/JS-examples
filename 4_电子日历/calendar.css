@@ -1,0 +1,67 @@
+/*标签统一样式，内容居中，上下边距10像素*/
+div{
+	text-align:center;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+h2{
+	text-align:center;
+	font-weight:bold;
+	text-shadow:1px 1px 1px dimgrey;
+	margin:20px;
+}
+hr{
+	margin:30px;
+}
+#calendar{
+	width:800px;
+	margin:auto;
+}
+
+/*设置按钮*/
+button{
+	width:25%;
+	height:45px;
+	float:left;
+	color:white;
+	background:rgba(98,160,213,0.8);
+	border-size:1px;
+	border-radius:10px;
+	box-shadow:2px 2px 3px rgba(97,115,170,1.00);
+	font-size:20px;
+	font-weight: bold;
+}
+
+/*设置中间显示当前时间的版块*/
+#month{
+	width:50%;
+	float:left;
+	font-weight:bold;
+}
+
+/*星期显示设置格式*/
+.day{
+	width:14%;
+	height:25px;
+	margin:1px;
+	margin-top:10px;
+	float:left;
+	background:rgba(145,203,205,0.9);
+}
+
+/*全部天数显示格式*/
+.everyday{
+	width:14%;
+	height:30px;
+	margin-top:10px;
+	margin-bottom:10px;
+	float:left;
+	
+}
+/*今天的日期格式设置*/
+.today{
+	border:darkred 1px solid;
+	border-radius:8px;
+	font-weight:bold;
+	height:22px;/*加上该语句是为了防止它加了边界以后块的高度和宽度跟其他的不一样从而会破坏布局*/
+}
