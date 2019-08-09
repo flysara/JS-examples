@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>问卷调查页面的实现</title>
+		<link rel="stylesheet" href="questionnaire.css" />
+	</head>
+	<body>
+		<div id="questionnaire">
+			<h1>手机移动支付业务问卷调查</h1>
+			<hr />
+			<form method="post" action="URL" onsubmit="return check()">
+				<ol>
+					<li>您的受教育程度是？</li>
+					<lable><input type="radio" name="q1" value="q1_1" required />高中</lable>
+					<lable><input type="radio" name="q1" value="q1_2" required />大专</lable>
+					<lable><input type="radio" name="q1" value="q1_3" required />本科</lable>
+					<lable><input type="radio" name="q1" value="q1_4" required />硕士研究生</lable>
+					<lable><input type="radio" name="q1" value="q1_5" required />博士及以上</lable>
+					
+					
+					<li>您的年龄是？</li>
+					<lable><input type="radio" name="q2" value="q2_1" required />18岁及以下</lable>
+					<lable><input type="radio" name="q2" value="q2_2" required />18-25岁</lable>
+					<lable><input type="radio" name="q2" value="q2_3" required />26-30岁</lable>
+					<lable><input type="radio" name="q2" value="q2_1" required />31-35岁</lable>
+					<lable><input type="radio" name="q2" value="q2_1" required />35岁及以上</lable>
+					
+					
+					<li>您是否使用过手机移动支付业务？</li>
+					<lable><input type="radio" name="q3" value="q3_1" required />从未听说过</lable>
+					<lable><input type="radio" name="q3" value="q3_2" required />听说过但未使用过</lable>
+					<lable><input type="radio" name="q3" value="q3_3" required />偶尔使用</lable>
+					<lable><input type="radio" name="q3" value="q3_1" required />经常使用</lable>
+					
+					
+					<li>您了解以下那些手机移动支付业务？（可多选）</li>
+					<lable><input type="checkbox" name="q4" value="q4_1" />支付宝</lable>
+					<lable><input type="checkbox" name="q4" value="q4_2" />微信支付</lable>
+					<lable><input type="checkbox" name="q4" value="q4_3" />电信翼支付</lable>
+					<lable><input type="checkbox" name="q4" value="q4_4" />Apple Pay</lable>
+					<lable><input type="checkbox" name="q4" value="q4_5" />以上均不了解</lable>
+					
+					
+					<li>您看重以下那些支付功能？（可多选）</li>
+					<lable><input type="checkbox" name="q5" value="q5_1" />话费/游戏币充值</lable><br />
+					<lable><input type="checkbox" name="q5" value="q5_2" />刷手机加油</lable><br />
+					<lable><input type="checkbox" name="q5" value="q5_3" />刷手机购物</lable><br />
+					<lable><input type="checkbox" name="q5" value="q5_4" />刷手机乘坐公交/轻轨/地铁</lable><br />
+					<lable><input type="checkbox" name="q5" value="q5_5" />水电煤/有线电视/宽带远程缴费</lable><br />
+					<lable><input type="checkbox" name="q5" value="q5_6" />享受联盟商户的优惠折扣</lable><br />
+					<lable><input type="checkbox" name="q5" value="q5_7" />以上均不感兴趣</lable><br />
+				
+				</ol>
+				<!--个人信息部分-->
+				<lable>您的姓名：
+				<input type="text" name="name" required />
+				</lable>
+				<lable>您的职业：
+				<input type="text" name="position" required />
+				</lable>
+				<lable>联系电话：
+				<input type="tel" name="tel" required />
+				</lable>
+		     <div id="btn">
+			<button type="submit">提交问卷</button>
+			</div>
+			</form>
+		</div>
+		
+	<script src="questionnaire.js"></script>
+	</body>
+</html>
